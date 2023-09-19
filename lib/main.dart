@@ -10,34 +10,48 @@ class Home extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Profile'),
-          centerTitle: true,
-          backgroundColor: Color.fromARGB(255, 133, 17, 162),
+      appBar: AppBar(
+        title: Text('Profile'),
+        centerTitle: true,
+        backgroundColor: Colors.red[600],
+      ),
+      body: Container(
+        decoration: BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topCenter,
+            end: Alignment.bottomCenter,
+            colors: [Color(0xFF222222), Color(0xFF333333)],
+          ),
         ),
-        body: Column(// or Row or Wrap
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
-          Text(
-            'Name: Clarence Vince Razo',
-            style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.black),
+              Text(
+                'Clarence Vince D. Razo',
+                style: TextStyle(
+                  color: Colors.white, 
+                  fontSize: 34, 
+                ),
+              ),
+              Text(
+                'Zone 5 Leet Santa Barbara Pangasinan',
+                style: TextStyle(
+                  color: Colors.white, 
+                  fontSize: 20, 
+                ),
+              ),
+              Text(
+                "High Risk, High Reward",
+                style: TextStyle(
+                  color: Colors.white, 
+                  fontSize: 20,
+                ),
+              ),
+            ],
           ),
-          Text(
-            'Address: Zone 5, Leet Santa Barbara Pangasinan',
-            style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.black),
-          ),
-          Text(
-            "Bio: HIgh Risk, High Reward ",
-            style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.normal,
-                    color: Colors.black),
-          ),
-        ]));
+        ),
+      ),
+    );
   }
 }
